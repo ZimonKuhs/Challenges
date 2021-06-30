@@ -1,4 +1,4 @@
-package codeChef.lightsOff;
+package lightsOff;
 
 public class Revisited {
 

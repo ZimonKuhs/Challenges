@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="codeChef"/>
+	<classpathentry kind="src" path="coderbyte"/>
+	<classpathentry kind="src" path="codewars"/>
+	<classpathentry kind="src" path="codinGame"/>
+	<classpathentry kind="src" path="exercism"/>
+	<classpathentry kind="src" path="hackerRank"/>
+	<classpathentry kind="src" path="leetCode"/>
+	<classpathentry kind="src" path="projectEuler"/>
+	<classpathentry kind="src" path="spoj"/>
+	<classpathentry kind="src" path="topCoder"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>

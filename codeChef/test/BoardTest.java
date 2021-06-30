@@ -1,4 +1,4 @@
-package codeChef.test;
+package test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThrows;
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import codeChef.lightsOff.Board;
+import lightsOff.Board;
 
 public class BoardTest {
 
