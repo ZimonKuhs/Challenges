@@ -2,15 +2,15 @@ package lightsOff;
 
 public class Revisited {
 
-	Revisited() {
-		doSolve();
-	}
+    Revisited() {
+        doSolve();
+    }
 
-	private void doSolve() {
-		// TODO: Implement a snassy solution.
-	}
+    private void doSolve() {
+        // TODO: Implement a snassy solution.
+    }
 
-	public static void main(String[] args) {
-		new Revisited();
-	}
+    public static void main(String[] args) {
+        new Revisited();
+    }
 }
