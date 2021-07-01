@@ -3,9 +3,9 @@ package atm;
 import java.util.List;
 
 public interface Transaction {
-	public boolean hasErrors();
+    public boolean hasErrors();
 
-	public List<String> errors();
+    public List<String> errors();
 
-	public double newBalance();
+    public double newBalance();
 }
