@@ -21,7 +21,7 @@ public class Account {
         return owner;
     }
 
-    public Withdraw withdraw(double amount) {
+    public Withdraw withdraw(int amount) {
         return new Withdraw(balance, amount);
     }
 

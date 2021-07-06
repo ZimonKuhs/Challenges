@@ -1,5 +1,8 @@
 package atm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import program.ProgramUtility;
 import type.StringUtility;
 
@@ -11,17 +14,18 @@ public class MakeTransaction {
                     "Usage: java atm.MakeTransaction [deposit | withdraw] [amount] [initial balance]");
         }
 
-        String error = "";
-        if (!StringUtility.isInteger(args[1])) {
-            error = error + "Transaction amount has to be an integer: "
-                    + args[1] + ".\n";
+        List<String> errors = new ArrayList<String>();
+        if (!StringUtility.isPositiveInteger(args[1])) {
+            errors.add("Transaction amount has to be a positive integer: "
+                    + args[1] + ".");
         }
-        if (!StringUtility.isFloat(args[2])) {
-            error = error + "Balance amount has to be a floating point number: "
-                    + args[2] + ".\n";
+        if (!StringUtility.isPositiveFloat(args[2])) {
+            errors.add(
+                    "Balance amount has to be a positive floating point number: "
+                            + args[2] + ".");
         }
-        if (error.length() > 0) {
-            ProgramUtility.error(error.substring(0, error.length() - 1));
+        if (errors.size() > 0) {
+            ProgramUtility.error(errors);
         }
 
         int amount = Integer.parseInt(args[1]);
@@ -37,15 +41,11 @@ public class MakeTransaction {
             transaction = new Withdraw(balance, amount);
         } else {
             ProgramUtility
-                    .error("No such operation possible: " + operation + ".");
+                    .error("No such operation exists: " + operation + ".");
         }
 
         if (transaction.hasErrors()) {
-            for (String transactionError : transaction.errors()) {
-                System.out.println(balance);
-                // System.out.println(transactionError);
-            }
-            System.exit(0);
+            ProgramUtility.error(transaction.errors());
         }
 
         System.out.println("Transaction successful. New balance: "
